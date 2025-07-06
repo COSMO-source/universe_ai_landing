@@ -1,51 +1,40 @@
 
 body {
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #000;
-  color: #fff;
-  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(130deg, #000428, #004e92);
+  color: white;
+  scroll-behavior: smooth;
 }
-.hero {
-  height: 100vh;
+header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  position: relative;
-  text-align: center;
+  padding: 20px;
 }
-.glow {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.4), transparent);
-  animation: pulse 4s infinite;
-  border-radius: 50%;
+.logo {
+  font-size: 28px;
+  font-weight: bold;
 }
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.6; }
+.logo span {
+  color: #00f0ff;
 }
-.content {
-  z-index: 1;
-}
-.content h1 {
-  font-size: 3rem;
-}
-.content span {
-  color: #00ffff;
-}
-.btn {
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #00ffff;
+.cta-button {
+  background-color: #00f0ff;
+  padding: 10px 20px;
   color: #000;
   text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
+  border-radius: 6px;
 }
-.btn:hover {
-  background-color: #00cccc;
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero span {
+  color: #00f0ff;
+}
+.content {
+  background: rgba(0,0,0,0.3);
+  padding: 60px 20px;
+  text-align: center;
 }
