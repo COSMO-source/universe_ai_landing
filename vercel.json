@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.universeai.pro" }],
+      "destination": "https://universeai.pro/:1",
+      "permanent": true
+    }
+  ]
+}
