@@ -1,0 +1,80 @@
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(ellipse at center, #0a0f2c 0%, #000 100%);
+    color: white;
+    overflow-x: hidden;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+h1 span {
+    color: #00ffff;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    color: #ccc;
+}
+
+.cta-button {
+    background: #00ffff;
+    color: #000;
+    padding: 1em 2em;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #00dddd;
+}
+
+.pulse-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.3);
+    position: absolute;
+    animation: pulse 2s infinite;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+.content {
+    padding: 4em 2em;
+    background: #111;
+    text-align: center;
+}
