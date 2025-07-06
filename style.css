@@ -2,39 +2,44 @@
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(130deg, #000428, #004e92);
-  color: white;
   scroll-behavior: smooth;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-}
-.logo span {
-  color: #00f0ff;
-}
-.cta-button {
-  background-color: #00f0ff;
-  padding: 10px 20px;
-  color: #000;
-  text-decoration: none;
-  border-radius: 6px;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  color: white;
 }
 .hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('bg-stars.gif') center/cover no-repeat;
   text-align: center;
-  padding: 100px 20px;
+  padding: 2rem;
 }
 .hero span {
   color: #00f0ff;
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
-.content {
-  background: rgba(0,0,0,0.3);
-  padding: 60px 20px;
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00f0ff; }
+  to { text-shadow: 0 0 20px #00f0ff, 0 0 30px #00f0ff; }
+}
+.cta {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: #00f0ff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.cta:hover {
+  background: white;
+  color: #000;
+}
+.section {
+  padding: 4rem;
+  background: #111;
   text-align: center;
 }
