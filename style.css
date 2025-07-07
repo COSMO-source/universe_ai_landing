@@ -1,156 +1,249 @@
 
-/* === UNIVERSAL STYLE === */
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
   overflow-x: hidden;
+  position: relative;
 }
 
-h1, h2, h3 {
-  text-align: center;
-  margin-top: 30px;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-}
-
-.section {
-  padding: 60px 20px;
-}
-
-.section-img {
-  display: block;
-  margin: 40px auto 20px;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,255,255,0.2);
-}
-
-/* === NAVBAR === */
-nav {
+.stars {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  background: black;
-  z-index: 1000;
-  padding: 10px 30px;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #000 60%, #0ff 100%);
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.04;
+  z-index: -2;
+  animation: starfield 60s linear infinite;
+}
+
+@keyframes starfield {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+.navbar {
   display: flex;
-  justify-content: flex-start;
-  gap: 20px;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
 }
 
-nav a {
-  color: #00ffff;
-  text-decoration: none;
+.navbar .logo {
+  color: cyan;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-/* === HERO === */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
 .hero {
-  text-align: center;
-  padding-top: 100px;
+  margin-top: 60px;
+  padding: 2rem;
+  position: relative;
+  z-index: 5;
 }
 
-.hero h1 {
-  font-size: 3em;
-  color: #ffffff;
+.hero-circle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.hero h2 {
-  font-size: 1.5em;
-  color: #bbbbbb;
-  margin-bottom: 20px;
+.hero-orbit {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 2px dashed rgba(0, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: rotate-aura 30s linear infinite;
+  z-index: 1;
 }
 
-.cta-buttons a {
-  margin: 0 10px;
-  color: #00ffff;
+.hero-circle {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #3a007d 20%, #050f4e 60%, #00ffe0 100%);
+  box-shadow:
+    0 0 40px rgba(0,255,255,0.4),
+    0 0 60px rgba(0,255,255,0.3),
+    0 0 80px rgba(0,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-fade 6s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.glow-title {
+  font-size: 2rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.tagline {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes pulse-fade {
+  0%, 100% {
+    box-shadow: 0 0 40px rgba(0,255,255,0.4), 0 0 60px rgba(0,255,255,0.3), 0 0 80px rgba(0,255,255,0.2);
+  }
+  50% {
+    box-shadow: 0 0 70px rgba(0,255,255,0.6), 0 0 90px rgba(0,255,255,0.5), 0 0 110px rgba(0,255,255,0.4);
+  }
+}
+
+@keyframes rotate-aura {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.05);
+  }
+}
+
+.cta-buttons {
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
   font-weight: bold;
+  margin: 0 10px;
   text-decoration: none;
+  display: inline-block;
 }
 
-/* === EMAIL FORM === */
-form {
+.btn-blue {
+  background: cyan;
+  color: #000;
+}
+
+.btn-purple {
+  background: mediumslateblue;
+  color: white;
+}
+
+.btn-purple-outline {
+  background: transparent;
+  border: 2px solid violet;
+  color: violet;
+}
+
+.email-form {
   margin-top: 20px;
-  text-align: center;
 }
 
-input[type="email"] {
-  padding: 10px;
-  border-radius: 4px;
+.email-form input {
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
   border: none;
   width: 250px;
+  margin-right: 10px;
 }
 
-button, input[type="submit"] {
-  padding: 10px 20px;
-  margin-left: 5px;
+.btn-email {
+  background: cyan;
   border: none;
-  border-radius: 4px;
-  background-color: #00ffff;
-  color: black;
+  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
   font-weight: bold;
   cursor: pointer;
 }
 
-/* === ROADMAP FINAL === */
-.roadmap-text {
-  font-size: 1.1rem;
-  color: #00ffff;
+.section {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: cyan;
+}
+
+.section p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.section-img {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0,255,255,0.2);
+}
+
+.avatar {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+.back-home {
   text-align: center;
-  line-height: 2;
-  letter-spacing: 0.5px;
-  margin-top: 40px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  padding: 40px 20px;
-  box-shadow: 0 0 20px #00fff3;
-  .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 220px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 40px 20px;
+  margin: 50px 0;
+}
+
+.back-button {
   font-family: 'Orbitron', sans-serif;
-  z-index: 1000;
-}
-
-.navbar h2 {
-  color: #fff;
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  text-shadow: 0 0 8px #0ff;
-}
-
-.navbar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.navbar li {
-  margin: 16px 0;
-}
-
-.navbar a {
-  color: #00ffff;
+  font-size: 18px;
+  color: #00f7ff;
+  background: transparent;
+  border: 2px solid #00f7ff;
+  padding: 12px 24px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff80 inset;
 }
 
-.navbar a:hover {
-  color: #fff;
+.back-button:hover {
+  background-color: #00f7ff;
+  color: black;
+  box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff90 inset;
 }
 
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
