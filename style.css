@@ -1,30 +1,14 @@
-/* === GLOBAL RESET === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Orbitron', sans-serif;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: black;
+  color: white;
   overflow-x: hidden;
-  position: relative;
-  z-index: 1;
 }
 
-a {
-  color: #4d90fe;
-  text-decoration: none;
-  margin: 0 0.5rem;
-  font-weight: 500;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* === CANVAS BACKGROUND === */
 #star-canvas {
   position: fixed;
   top: 0;
@@ -32,92 +16,132 @@ a:hover {
   z-index: 0;
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 
-/* === MAIN CONTAINER === */
+nav {
+  position: fixed;
+  top: 2rem;
+  left: 1rem;
+  z-index: 3;
+  font-size: 0.9rem;
+  line-height: 2;
+  color: #fff;
+}
+
+nav h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul li {
+  margin: 5px 0;
+}
+
+nav ul li a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
 .main-content {
   position: relative;
   z-index: 2;
-  padding: 3rem 1rem;
+  padding: 6rem 1rem 3rem 15rem;
   text-align: center;
 }
 
-/* === HEADINGS === */
-h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-h3 {
-  font-size: 2rem;
-  margin: 2rem 0 1rem;
-  color: #00ffff;
+.hero {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
 }
 
-/* === PARAGRAPH === */
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 800px;
+.hero h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #aaa;
+  max-width: 700px;
   margin: 0 auto 2rem;
 }
 
-/* === BUTTON & INPUT === */
-input[type="email"] {
-  padding: 0.6rem 1rem;
-  border-radius: 5px;
-  border: none;
-  margin-top: 1rem;
-  width: 250px;
-  font-family: inherit;
-}
-
-button, .email-button {
-  padding: 0.6rem 1.2rem;
-  margin-left: 0.5rem;
-  border: none;
-  background-color: #ffffff;
-  color: #000000;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  font-family: inherit;
-  transition: background-color 0.3s ease;
-}
-
-button:hover, .email-button:hover {
+.hero .buttons a {
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
   background-color: #00ffff;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hero .buttons a:hover {
+  background-color: #0ff;
   color: #000;
 }
 
-/* === SECTION STYLING === */
+.email-form input[type="email"] {
+  padding: 0.5rem;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.email-form button {
+  padding: 0.5rem 1rem;
+  background-color: #00ffff;
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.email-form button:hover {
+  background-color: #0ff;
+}
+
 .section {
-  margin: 3rem auto;
-  padding: 2rem 1rem;
-  max-width: 1000px;
+  margin: 4rem 0;
+  padding: 0 1rem;
   text-align: center;
 }
 
-/* === NAVIGATION (if needed) === */
-nav {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 3;
+.section img {
+  max-width: 100%;
+  border-radius: 10px;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-  h2 {
-    font-size: 1.2rem;
-  }
-  input[type="email"] {
-    width: 90%;
-  }
+.section h2 {
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
 }
