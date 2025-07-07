@@ -247,3 +247,10 @@ body {
   box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff90 inset;
 }
 
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: black;
+}
