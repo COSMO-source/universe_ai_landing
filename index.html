@@ -10,6 +10,7 @@
     <style>html { scroll-behavior: smooth; }</style>
   </head>
   <body>
+    <canvas id="starfield"></canvas>
     <div class="stars"></div>
     <nav class="navbar">
       <div class="logo">UniVerseAI</div>
@@ -28,11 +29,11 @@
         <div class="hero-circle">
           <div class="hero-text">
             <h1>U</h1>
-            <p>UniVerseAI<br />The Core</p>
+            <p>UniVerse AI<br />The Core</p>
           </div>
         </div>
       </div>
-      <h2 class="glow-title">UniVerseAI</h2>
+      <h2 class="glow-title">UniVerse AI</h2>
       <p class="tagline">Universal intelligence toolkit for every future</p>
       <div class="cta-buttons">
         <a href="#waitlist" class="btn btn-blue">Join Waitlist</a>
@@ -57,24 +58,12 @@
       <p>Our token fuels the entire UniVerse AI ecosystem. Supply is limited, deflationary by design, and utility-driven for long-term growth across partners and modules.</p>
     </section>
 
-    <section id="token" class="animated-glow-section">
-      <h2>UniVerse Token</h2>
-      <div class="token-section">
-      <img src="token_intro.png" alt="UniVerse Token Visual" class="token-image-glow" />
-      <div class="token-description neural-glow">
-      <p>The UniVerse Token is the foundational layer powering the modular intelligence infrastructure of UniVerse AI. It enables utility access, governance, and future modular expansion through incentivized participation and ecosystem staking.</p>
-      <p>Available for early supporters and pioneers who believe in an open, self-governed, and collaborative AI future.</p>
-    </div>
-  </div>
-</section>
-
-
     
-   <section id="roadmap" class="section fade-in">
-     <h2>Roadmap</h2>
-     <img src="roadmap.png" alt="Roadmap" class="section-img" />
-     <div class="section-content">
-     <ul>
+<section id="roadmap" class="section fade-in">
+  <h2>Roadmap</h2>
+  <img src="roadmap.png" alt="Roadmap" class="section-img" />
+  <div class="section-content">
+    <ul>
       <li><strong>2023:</strong> Initiation of UniVerse AI Core</li>
       <li><strong>2024:</strong> Prototype of Modular Agent System</li>
       <li><strong>2025:</strong> Deployment of Auto-Revenue Engine</li>
@@ -115,12 +104,6 @@
       }, { threshold: 0.1 });
       sections.forEach(section => observer.observe(section));
     </script>
-
-    
-
-    <canvas id="starfield"></canvas>
-    </script>
-    <script src="stars.js"></script>
+      <script src="stars.js"></script>
   </body>
 </html>
-
