@@ -111,6 +111,45 @@ button, input[type="submit"] {
   border-radius: 12px;
   padding: 40px 20px;
   box-shadow: 0 0 20px #00fff3;
+  .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 40px 20px;
+  font-family: 'Orbitron', sans-serif;
+  z-index: 1000;
+}
+
+.navbar h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 8px #0ff;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 16px 0;
+}
+
+.navbar a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
   width: 80%;
   margin-left: auto;
   margin-right: auto;
