@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UniVerse AI — The Core</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
   <style>html { scroll-behavior: smooth; }</style>
 </head>
 <body>
-  <div class="stars"></div>
+  <!-- BACKGROUND CANVAS -->
+  <canvas id="starsCanvas" style="position:fixed; top:0; left:0; z-index:-1;"></canvas>
+
   <nav class="navbar">
     <div class="logo">UniVerseAI</div>
     <ul class="nav-links">
@@ -65,35 +66,34 @@
   </section>
 
   <section id="roadmap" class="section fade-in">
-  <h2>Roadmap</h2>
-  <img src="roadmap.png" alt="Roadmap" class="section-img" />
-  <div class="roadmap-text">
-    <strong>2025</strong><br>
-    Q1 — Launch UniVerse Token & Website<br>
-    Q2 — Initial Airdrop + Community Growth<br>
-    Q3 — Exchange Listing + Governance Beta<br>
-    Q4 — AI Modular System Launch<br><br>
+    <h2>Roadmap</h2>
+    <img src="roadmap.png" alt="Roadmap" class="section-img" />
+    <div class="roadmap-text">
+      <strong>2025</strong><br>
+      Q1 — Launch UniVerse Token & Website<br>
+      Q2 — Initial Airdrop + Community Growth<br>
+      Q3 — Exchange Listing + Governance Beta<br>
+      Q4 — AI Modular System Launch<br><br>
 
-    <strong>2026</strong><br>
-    Q1 — Mobile App Beta + Expansion<br>
-    Q2 — Strategic Partnerships<br>
-    Q3 — Multi-Agent Marketplace<br>
-    Q4 — Treasury Governance v2<br><br>
+      <strong>2026</strong><br>
+      Q1 — Mobile App Beta + Expansion<br>
+      Q2 — Strategic Partnerships<br>
+      Q3 — Multi-Agent Marketplace<br>
+      Q4 — Treasury Governance v2<br><br>
 
-    <strong>2027</strong><br>
-    Q1 — Launchpad Integration<br>
-    Q2 — Real-World AI Use Cases<br>
-    Q3 — Scaling Global Adoption<br>
-    Q4 — DAO Full Activation<br><br>
+      <strong>2027</strong><br>
+      Q1 — Launchpad Integration<br>
+      Q2 — Real-World AI Use Cases<br>
+      Q3 — Scaling Global Adoption<br>
+      Q4 — DAO Full Activation<br><br>
 
-    <strong>2028</strong><br>
-    Q1 — Cross-chain Expansion<br>
-    Q2 — UniVerse Labs Initiative<br>
-    Q3 — Ecosystem Consolidation<br>
-    Q4 — Final Stage: Autonomous AI Core
-  </div>
-</section>
-
+      <strong>2028</strong><br>
+      Q1 — Cross-chain Expansion<br>
+      Q2 — UniVerse Labs Initiative<br>
+      Q3 — Ecosystem Consolidation<br>
+      Q4 — Final Stage: Autonomous AI Core
+    </div>
+  </section>
 
   <section id="giveaway" class="section fade-in">
     <h2>Giveaway & Early Join</h2>
@@ -106,6 +106,10 @@
     <a class="btn btn-purple" href="#">Download Whitepaper</a>
   </section>
 
+  <!-- ANIMASI STARS -->
+  <script src="stars.js"></script>
+
+  <!-- OBSERVER EFFECT -->
   <script>
     const sections = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
