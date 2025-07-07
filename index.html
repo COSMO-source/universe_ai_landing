@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,64 +16,60 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
-        <li><a href="#tokenomics">Token</a></li>
+        <li><a href="#tokenomics">UniVerse Token</a></li>
         <li><a href="#giveaway">Giveaway</a></li>
         <li><a href="#whitepaper">Whitepaper</a></li>
       </ul>
     </nav>
 
     <header class="hero hero-animated">
-      <div class="hero-circle-wrapper">
-        <div class="hero-orbit"></div>
-        <div class="hero-circle">
-          <div class="hero-text">
-            <h1>U</h1>
-            <p>UniVerse AI<br />The Core</p>
-          </div>
+      <div class="hero-circle">
+        <div class="hero-circle-inner">
+          <span class="hero-letter">U</span>
+          <div class="hero-subtitle">UniVerse AI<br />The Core</div>
         </div>
       </div>
-      <h2 class="glow-title">UniVerse AI</h2>
-      <p class="tagline">Universal intelligence toolkit for every future</p>
-      <div class="cta-buttons">
-        <a href="#waitlist" class="btn btn-blue">Join Waitlist</a>
-        <a href="#whitepaper" class="btn btn-purple-outline">View Whitepaper</a>
-        <a href="#buy" class="btn btn-purple">Buy Now</a>
-      </div>
-      <div class="email-form">
-        <input type="email" placeholder="Enter your email..." />
-        <button class="btn-email">Get Early Access</button>
+      <h1 class="main-title">UniVerse AI</h1>
+      <p class="subtitle">Universal intelligence toolkit for every future</p>
+      <div class="hero-buttons">
+        <button class="btn-waitlist">Join Waitlist</button>
+        <button class="btn-whitepaper">View Whitepaper</button>
+        <button class="btn-buy">Buy Now</button>
       </div>
     </header>
 
     <section id="about" class="section fade-in">
-      <h2>About UniVerse AI</h2>
+      <h2>About Universe AI</h2>
       <img src="about.png" alt="About Image" class="section-img" />
       <p>UniVerse AI is the universal infrastructure that empowers future intelligence systems to connect, evolve, and create across boundaries — built for adaptability, driven by innovation.</p>
     </section>
 
-    <section id="Tokenomics" class="section fade-in">
+    <section id="tokenomics" class="section fade-in">
       <h2>Tokenomics</h2>
       <img src="Tokenomics.png" alt="Tokenomics Image" class="section-img" />
       <p>Our token fuels the entire UniVerse AI ecosystem. Supply is limited, deflationary by design, and utility-driven for long-term growth across partners and modules.</p>
     </section>
 
-    
-<section id="roadmap" class="section fade-in">
-  <h2>Roadmap</h2>
-  <img src="roadmap.png" alt="Roadmap" class="section-img" />
-  <div class="section-content">
-    <ul>
-      <li><strong>2023:</strong> Initiation of UniVerse AI Core</li>
-      <li><strong>2024:</strong> Prototype of Modular Agent System</li>
-      <li><strong>2025:</strong> Deployment of Auto-Revenue Engine</li>
-      <li><strong>2026:</strong> Expansion to Cross-Platform Ecosystems</li>
-      <li><strong>2027:</strong> Full Decentralization + Personal AI Token</li>
-      <li><strong>2028:</strong> AI Sovereignty + Global Utility</li>
-    </ul>
-  </div>
-</section>
+    <section id="token-intro" class="section fade-in">
+      <h2>Token Allocation Overview</h2>
+      <img src="token_intro.png" alt="Token Intro Image" class="section-img" />
+      <p>This visual shows how our token is allocated: Dev, Liquidity, Community, and Reserve — driving real growth.</p>
+    </section>
 
-
+    <section id="roadmap" class="section fade-in">
+      <h2>Roadmap</h2>
+      <img src="roadmap.png" alt="Roadmap" class="section-img" />
+      <div class="section-content">
+        <ul>
+          <li><strong>2023:</strong> Initiation of UniVerse AI Core</li>
+          <li><strong>2024:</strong> Prototype of Modular Agent System</li>
+          <li><strong>2025:</strong> Deployment of Auto-Revenue Engine</li>
+          <li><strong>2026:</strong> Expansion to Cross-Platform Ecosystems</li>
+          <li><strong>2027:</strong> Full Decentralization + Personal AI Token</li>
+          <li><strong>2028:</strong> AI Sovereignty + Global Utility</li>
+        </ul>
+      </div>
+    </section>
 
     <section id="giveaway" class="section fade-in">
       <h2>Giveaway & Early Join</h2>
@@ -83,16 +78,10 @@
 
     <section id="whitepaper" class="section fade-in">
       <h2>Whitepaper</h2>
-      <p>Explore our full vision, architecture, and token design. The whitepaper is your guide to the intelligence era.</p>
-      <a class="btn btn-purple" href="#">Download Whitepaper</a>
+      <p>Explore the full whitepaper to understand our mission, vision, and how the modular AI toolkit will revolutionize the future.</p>
     </section>
 
-    <section id="ai-avatar" class="section fade-in">
-      <h2>Meet Our AI Guide</h2>
-      <img src="assets/avatar.png" alt="AI Avatar" class="avatar" />
-      <p>Your intelligent assistant to explore the future with you.</p>
-    </section>
-
+    <script src="stars.js"></script>
     <script>
       const sections = document.querySelectorAll('.fade-in');
       const observer = new IntersectionObserver(entries => {
@@ -104,6 +93,5 @@
       }, { threshold: 0.1 });
       sections.forEach(section => observer.observe(section));
     </script>
-      <script src="stars.js"></script>
   </body>
 </html>
