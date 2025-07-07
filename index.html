@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,88 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UniVerse AI — The Core</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
-    <style>
-      html { scroll-behavior: smooth; }
-      .section-img {
-        max-width: 500px;
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <style>html { scroll-behavior: smooth; }</style>
   </head>
   <body>
-    <canvas id="starfield"></canvas>
     <div class="stars"></div>
-    <div class="navbar">
+    <nav class="navbar">
       <div class="logo">UniVerseAI</div>
-      <nav class="nav-links">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#tokenintro">UniVerse Token</a></li>
-          <li><a href="#tokenomics">Tokenomics</a></li>
-          <li><a href="#roadmap">Roadmap</a></li>
-          <li><a href="#giveaway">Giveaway</a></li>
-          <li><a href="#whitepaper">Whitepaper</a></li>
-        </ul>
-      </nav>
-    </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#tokenomics">Token</a></li>
+        <li><a href="#giveaway">Giveaway</a></li>
+        <li><a href="#whitepaper">Whitepaper</a></li>
+      </ul>
+    </nav>
 
     <header class="hero hero-animated">
-      <div class="circle-glow">
-        <div class="circle-inner">
-          <h1 class="hero-logo-text">U</h1>
-          <p>UniVerse AI<br />The Core</p>
+      <div class="hero-circle-wrapper">
+        <div class="hero-orbit"></div>
+        <div class="hero-circle">
+          <div class="hero-text">
+            <h1>U</h1>
+            <p>UniVerse AI<br />The Core</p>
+          </div>
         </div>
       </div>
-      <h1 class="main-title">UniVerse AI</h1>
-      <p class="subtitle">Universal intelligence toolkit for every future</p>
-      <div class="hero-buttons">
-        <a href="#" class="btn btn-glow">Join Waitlist</a>
-        <a href="#whitepaper" class="btn">View Whitepaper</a>
-        <a href="#" class="btn btn-buy">Buy Now</a>
+      <h2 class="glow-title">UniVerse AI</h2>
+      <p class="tagline">Universal intelligence toolkit for every future</p>
+      <div class="cta-buttons">
+        <a href="#waitlist" class="btn btn-blue">Join Waitlist</a>
+        <a href="#whitepaper" class="btn btn-purple-outline">View Whitepaper</a>
+        <a href="#buy" class="btn btn-purple">Buy Now</a>
+      </div>
+      <div class="email-form">
+        <input type="email" placeholder="Enter your email..." />
+        <button class="btn-email">Get Early Access</button>
       </div>
     </header>
 
     <section id="about" class="section fade-in">
       <h2>About UniVerse AI</h2>
       <img src="about.png" alt="About Image" class="section-img" />
-      <p>
-        UniVerse AI is the universal infrastructure that empowers future intelligence systems to connect, evolve,
-        and create across boundaries — built for adaptability, driven by innovation.
-      </p>
+      <p>UniVerse AI is the universal infrastructure that empowers future intelligence systems to connect, evolve, and create across boundaries — built for adaptability, driven by innovation.</p>
     </section>
 
-    <section id="tokenintro" class="section fade-in">
-      <h2>UniVerse Token Utility</h2>
-      <img src="token_intro.png" alt="Token Intro" class="section-img" />
-    </section>
-
-    <section id="tokenomics" class="section fade-in">
+    <section id="Tokenomics" class="section fade-in">
       <h2>Tokenomics</h2>
       <img src="Tokenomics.png" alt="Tokenomics Image" class="section-img" />
-      <p>
-        Our token fuels the entire UniVerse AI ecosystem. Supply is limited, deflationary by design,
-        and utility-driven for long-term growth across partners and modules.
-      </p>
+      <p>Our token fuels the entire UniVerse AI ecosystem. Supply is limited, deflationary by design, and utility-driven for long-term growth across partners and modules.</p>
     </section>
 
-    <section id="roadmap" class="section fade-in">
-      <h2>Roadmap</h2>
-      <img src="roadmap.png" alt="Roadmap" class="section-img" />
-      <div class="section-content">
-        <ul>
-          <li><strong>2023:</strong> Initiation of UniVerse AI Core</li>
-          <li><strong>2024:</strong> Prototype of Modular Agent System</li>
-          <li><strong>2025:</strong> Deployment of Auto-Revenue Engine</li>
-          <li><strong>2026:</strong> Expansion to Cross-Platform Ecosystems</li>
-          <li><strong>2027:</strong> Full Decentralization + Personal AI Token</li>
-          <li><strong>2028:</strong> AI Sovereignty + Global Utility</li>
-        </ul>
-      </div>
-    </section>
+    
+<section id="roadmap" class="section fade-in">
+  <h2>Roadmap</h2>
+  <img src="roadmap.png" alt="Roadmap" class="section-img" />
+  <div class="section-content">
+    <ul>
+      <li><strong>2023:</strong> Initiation of UniVerse AI Core</li>
+      <li><strong>2024:</strong> Prototype of Modular Agent System</li>
+      <li><strong>2025:</strong> Deployment of Auto-Revenue Engine</li>
+      <li><strong>2026:</strong> Expansion to Cross-Platform Ecosystems</li>
+      <li><strong>2027:</strong> Full Decentralization + Personal AI Token</li>
+      <li><strong>2028:</strong> AI Sovereignty + Global Utility</li>
+    </ul>
+  </div>
+</section>
+
+
 
     <section id="giveaway" class="section fade-in">
       <h2>Giveaway & Early Join</h2>
@@ -95,10 +82,26 @@
 
     <section id="whitepaper" class="section fade-in">
       <h2>Whitepaper</h2>
-      <p>Explore our complete vision, technology, and tokenomics in our whitepaper. Transparent, open, and built for the future.</p>
-      <a href="whitepaper.pdf" class="btn" target="_blank">Download Whitepaper</a>
+      <p>Explore our full vision, architecture, and token design. The whitepaper is your guide to the intelligence era.</p>
+      <a class="btn btn-purple" href="#">Download Whitepaper</a>
     </section>
 
-    <script src="stars.js"></script>
+    <section id="ai-avatar" class="section fade-in">
+      <h2>Meet Our AI Guide</h2>
+      <img src="assets/avatar.png" alt="AI Avatar" class="avatar" />
+      <p>Your intelligent assistant to explore the future with you.</p>
+    </section>
+
+    <script>
+      const sections = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      sections.forEach(section => observer.observe(section));
+    </script>
   </body>
 </html>
