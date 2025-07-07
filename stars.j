@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener('load', () => {
   const canvas = document.getElementById('starfield');
   const ctx = canvas.getContext('2d');
 
