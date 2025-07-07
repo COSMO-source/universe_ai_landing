@@ -1,147 +1,249 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Orbitron', sans-serif;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
   overflow-x: hidden;
+  position: relative;
 }
 
-#star-canvas {
+.stars {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
+  background: radial-gradient(ellipse at bottom, #000 60%, #0ff 100%);
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.04;
+  z-index: -2;
+  animation: starfield 60s linear infinite;
 }
 
-nav {
-  position: fixed;
-  top: 2rem;
-  left: 1rem;
-  z-index: 3;
-  font-size: 0.9rem;
-  line-height: 2;
-  color: #fff;
+@keyframes starfield {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
 }
 
-nav h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-nav ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-nav ul li {
-  margin: 5px 0;
-}
-
-nav ul li a {
-  color: #00ffff;
-  text-decoration: none;
-}
-
-.main-content {
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
   position: relative;
-  z-index: 2;
-  padding: 6rem 1rem 3rem 15rem;
-  text-align: center;
+  z-index: 10;
+}
+
+.navbar .logo {
+  color: cyan;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .hero {
-  padding-top: 3rem;
-  padding-bottom: 4rem;
+  margin-top: 60px;
+  padding: 2rem;
+  position: relative;
+  z-index: 5;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin: 0.5rem 0;
+.hero-circle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.hero h2 {
-  font-size: 1.5rem;
-  color: #ccc;
+.hero-orbit {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 2px dashed rgba(0, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: rotate-aura 30s linear infinite;
+  z-index: 1;
 }
 
-.hero p {
-  font-size: 1.1rem;
-  color: #aaa;
-  max-width: 700px;
-  margin: 0 auto 2rem;
+.hero-circle {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #3a007d 20%, #050f4e 60%, #00ffe0 100%);
+  box-shadow:
+    0 0 40px rgba(0,255,255,0.4),
+    0 0 60px rgba(0,255,255,0.3),
+    0 0 80px rgba(0,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse-fade 6s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
 }
 
-.hero .buttons a {
-  margin: 0 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #00ffff;
-  color: black;
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.glow-title {
+  font-size: 2rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.tagline {
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes pulse-fade {
+  0%, 100% {
+    box-shadow: 0 0 40px rgba(0,255,255,0.4), 0 0 60px rgba(0,255,255,0.3), 0 0 80px rgba(0,255,255,0.2);
+  }
+  50% {
+    box-shadow: 0 0 70px rgba(0,255,255,0.6), 0 0 90px rgba(0,255,255,0.5), 0 0 110px rgba(0,255,255,0.4);
+  }
+}
+
+@keyframes rotate-aura {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.05);
+  }
+}
+
+.cta-buttons {
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  margin: 0 10px;
   text-decoration: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.hero .buttons a:hover {
-  background-color: #0ff;
+.btn-blue {
+  background: cyan;
   color: #000;
 }
 
-.email-form input[type="email"] {
-  padding: 0.5rem;
-  width: 250px;
+.btn-purple {
+  background: mediumslateblue;
+  color: white;
+}
+
+.btn-purple-outline {
+  background: transparent;
+  border: 2px solid violet;
+  color: violet;
+}
+
+.email-form {
+  margin-top: 20px;
+}
+
+.email-form input {
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
   border: none;
-  border-radius: 5px;
+  width: 250px;
   margin-right: 10px;
 }
 
-.email-form button {
-  padding: 0.5rem 1rem;
-  background-color: #00ffff;
+.btn-email {
+  background: cyan;
   border: none;
-  color: black;
+  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
   font-weight: bold;
-  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.email-form button:hover {
-  background-color: #0ff;
 }
 
 .section {
-  margin: 4rem 0;
-  padding: 0 1rem;
-  text-align: center;
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
 }
 
-.section img {
-  max-width: 100%;
-  border-radius: 10px;
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section h2 {
   font-size: 2rem;
-  color: #00ffff;
   margin-bottom: 1rem;
+  color: cyan;
 }
 
 .section p {
-  max-width: 800px;
-  margin: 0 auto;
+  font-size: 1rem;
   color: #ccc;
-  line-height: 1.6;
 }
 
-footer {
-  padding: 2rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
+.section-img {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0,255,255,0.2);
 }
+
+.avatar {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+.back-home {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.back-button {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  color: #00f7ff;
+  background: transparent;
+  border: 2px solid #00f7ff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff80 inset;
+}
+
+.back-button:hover {
+  background-color: #00f7ff;
+  color: black;
+  box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff90 inset;
+}
+
