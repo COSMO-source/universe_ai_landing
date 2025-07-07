@@ -247,3 +247,18 @@ body {
   box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff90 inset;
 }
 
+.roadmap-text {
+  font-size: 1.1rem;
+  color: #00f0ff;
+  text-align: center;
+  line-height: 2;
+  letter-spacing: 0.5px;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 0 20px #00f0ff33;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
