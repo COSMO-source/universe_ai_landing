@@ -1,87 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
+/* === UNIVERSAL STYLE === */
 body {
   margin: 0;
-  padding: 0;
-  background: black;
-  color: white;
   font-family: 'Orbitron', sans-serif;
+  background-color: black;
+  color: white;
   overflow-x: hidden;
 }
 
-.section {
-  padding: 80px 20px;
+h1, h2, h3 {
   text-align: center;
-}
-
-.section h2 {
-  font-size: 2.4rem;
+  margin-top: 30px;
   color: #00ffff;
   text-shadow: 0 0 10px #00ffff;
-  margin-bottom: 40px;
+}
+
+.section {
+  padding: 60px 20px;
 }
 
 .section-img {
+  display: block;
+  margin: 40px auto 20px;
   max-width: 100%;
-  height: auto;
-  margin-bottom: 40px;
   border-radius: 12px;
-  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
 }
 
-/* BACK BUTTON (optional) */
-.back-button {
-  display: inline-block;
-  margin-top: 40px;
-  background: transparent;
-  border: 2px solid #00f7ff;
-  padding: 12px 24px;
-  border-radius: 10px;
+/* === NAVBAR === */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+  z-index: 1000;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+nav a {
+  color: #00ffff;
   text-decoration: none;
-  color: #00f7ff;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7f0 inset;
-}
-.back-button:hover {
-  background-color: #00f7ff;
-  color: black;
-  box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7f0 inset;
+  font-weight: bold;
 }
 
-/* ROADMAP SECTION */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* === HERO === */
+.hero {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  color: #ffffff;
+}
+
+.hero h2 {
+  font-size: 1.5em;
+  color: #bbbbbb;
+  margin-bottom: 20px;
+}
+
+.cta-buttons a {
+  margin: 0 10px;
+  color: #00ffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* === EMAIL FORM === */
+form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+input[type="email"] {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  width: 250px;
+}
+
+button, input[type="submit"] {
+  padding: 10px 20px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #00ffff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* === ROADMAP FINAL === */
 .roadmap-text {
   font-size: 1.1rem;
   color: #00ffff;
-  text-align: left;
-  line-height: 1.8;
+  text-align: center;
+  line-height: 2;
+  letter-spacing: 0.5px;
   margin-top: 40px;
   background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 0 20px #00fff2;
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 0 20px #00fff3;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Orbitron', sans-serif;
-}
-
-.roadmap-text strong {
-  display: block;
-  font-size: 1.4rem;
-  color: #ffffff;
-  margin-top: 24px;
-  margin-bottom: 12px;
-  text-shadow: 0 0 10px #00ffff;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding-bottom: 4px;
-}
-
-/* STARS BACKGROUND (if using stars.js) */
-#stars, #stars2, #stars3 {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0; left: 0;
-  z-index: -1;
-  background: transparent;
 }
