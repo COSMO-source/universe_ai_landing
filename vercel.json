@@ -1,7 +1,7 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/" },
-    { "source": "/about", "destination": "/about/index.html" }
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/(.*)", "destination": "/" }
   ],
   "cleanUrls": true
 }
