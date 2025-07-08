@@ -247,13 +247,14 @@ body {
   box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff90 inset;
 }
 
-canvas#starfield {
+#starfield {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   background: black;
+  pointer-events: none;
 }
 
