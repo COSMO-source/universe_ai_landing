@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniVerse AI — The Core</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+
+  <nav class="navbar">
+    <div class="logo">UniVerseAI</div>
+    <ul class="nav-links">
+      <li><a href="about/index-v2.html">About</a></li>
+      <li><a href="tokenomics.html">UniVerse Token</a></li>
+      <li><a href="roadmap.html">Roadmap</a></li>
+      <li><a href="giveaway.html">Giveaway</a></li>
+      <li><a href="whitepaper.html">Whitepaper</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero hero-animated">
+    <div class="hero-circle-wrapper">
+      <div class="hero-orbit"></div>
+      <div class="hero-circle">
+        <div class="hero-text">
+          <h1>U</h1>
+          <p>UniVerse AI<br />The Core</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="glow-title">UniVerse AI</h2>
+    <p class="tagline">Universal intelligence toolkit for every future</p>
+    <div class="cta-buttons">
+      <a href="#waitlist" class="btn btn-blue">Join Waitlist</a>
+      <a href="whitepaper.html" class="btn btn-purple-outline">View Whitepaper</a>
+      <a href="#buy" class="btn btn-purple">Buy Now</a>
+    </div>
+    <div class="email-form">
+      <input type="email" placeholder="Enter your email..." />
+      <button class="btn-email">Get Early Access</button>
+    </div>
+  </header>
+
+  <section id="about" class="section fade-in">
+    <h2>About UniVerse AI</h2>
+    <img src="about.png" alt="About Image" class="section-img" />
+    <p>UniVerse AI is the universal infrastructure that empowers future intelligence systems to connect, evolve, and create across boundaries — built for adaptability, driven by innovation.</p>
+  </section>
+
+  <section id="token" class="section fade-in">
+    <h2>Introducing UniVerse Token</h2>
+    <img src="token_intro.png" alt="Token Intro Image" class="section-img" />
+    <p>Powering every interaction, transaction, and transformation within the UniVerse AI ecosystem. Our token embodies utility, governance, and access.</p>
+  </section>
+
+  <section id="tokenomics" class="section fade-in">
+    <h2>Tokenomics</h2>
+    <img src="Tokenomics.png" alt="Tokenomics Image" class="section-img" />
+    <p>Our token fuels the entire UniVerse AI ecosystem. Supply is limited, deflationary by design, and utility-driven for long-term growth across partners and modules.</p>
+  </section>
+
+  <section id="roadmap" class="section fade-in">
+  <h2>Roadmap</h2>
+  <img src="roadmap.png" alt="Roadmap" class="section-img" />
+  <div class="roadmap-text">
+    <strong>2025</strong><br>
+    Q1 — Launch UniVerse Token & Website<br>
+    Q2 — Initial Airdrop + Community Growth<br>
+    Q3 — Exchange Listing + Governance Beta<br>
+    Q4 — AI Modular System Launch<br><br>
+
+    <strong>2026</strong><br>
+    Q1 — Mobile App Beta + Expansion<br>
+    Q2 — Strategic Partnerships<br>
+    Q3 — Multi-Agent Marketplace<br>
+    Q4 — Treasury Governance v2<br><br>
+
+    <strong>2027</strong><br>
+    Q1 — Launchpad Integration<br>
+    Q2 — Real-World AI Use Cases<br>
+    Q3 — Scaling Global Adoption<br>
+    Q4 — DAO Full Activation<br><br>
+
+    <strong>2028</strong><br>
+    Q1 — Cross-chain Expansion<br>
+    Q2 — UniVerse Labs Initiative<br>
+    Q3 — Ecosystem Consolidation<br>
+    Q4 — Final Stage: Autonomous AI Core
+  </div>
+</section>
+
+
+  <section id="giveaway" class="section fade-in">
+    <h2>Giveaway & Early Join</h2>
+    <p>Get rewarded for being early. Special airdrops and unlocks await those who commit early to the UniVerse AI journey.</p>
+  </section>
+
+  <section id="whitepaper" class="section fade-in">
+    <h2>Whitepaper</h2>
+    <p>Explore our full vision, architecture, and token design. The whitepaper is your guide to the intelligence era.</p>
+    <a class="btn btn-purple" href="#">Download Whitepaper</a>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+  </script>
+  <script src="/stars.js"></script>
+</body>
+</html>
