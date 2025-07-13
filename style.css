@@ -282,7 +282,7 @@ box-shadow:
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/bg.png'); /* pastikan path benar */
+  background-image: url("/bg.png"); /* pastikan path benar */
   background-size: cover;
   background-color: black;
   background-position: center;
