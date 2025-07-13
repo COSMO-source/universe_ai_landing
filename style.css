@@ -282,7 +282,7 @@ box-shadow:
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("/bg.png");
+  background-image: url("/bg-real.png");
   background-size: cover;
   background-color: black;
   background-position: center;
