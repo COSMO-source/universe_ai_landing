@@ -282,17 +282,18 @@ box-shadow:
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("bg.png"); /* pastikan path benar */
+  background-image: url("bg.png");
   background-size: cover;
-  background-color: black;
+  background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   z-index: -10;
   animation: bgZoom 60s ease-in-out infinite alternate;
-  opacity: 1; /* ubah dari 0.9 ke 1 */
-  filter: brightness(1.2) contrast(1.1) saturate(1.1); /* tambahan efek */
+  opacity: 1;
+  filter: brightness(1.2) contrast(1.1) saturate(1.1);
 }
+
 
 @keyframes bgZoom {
   0% { transform: scale(1); }
