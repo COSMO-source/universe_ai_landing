@@ -1,15 +1,5 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import * as THREE from 'three';
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-`;
-
-setupCounter(document.querySelector('#counter'))
-
-// ⬇️ Tempelkan kode ini di bawah
 document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.getElementById('starfield');
   if (!canvas) {
@@ -17,61 +7,61 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  const ctx = canvas.getContext("2d");
-  if (!ctx) {
-    console.error("❌ Gagal mendapatkan canvas context.");
-    return;
+  const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 15;
+
+  const geometry = new THREE.BufferGeometry();
+  const count = 20000;
+  const positions = new Float32Array(count * 3);
+  const colors = new Float32Array(count * 3);
+
+  for (let i = 0; i < count; i++) {
+    const i3 = i * 3;
+    const radius = Math.random() * 10;
+    const spinAngle = radius * 1.5;
+    const branchAngle = (i % 5) / 5 * Math.PI * 2;
+
+    positions[i3] = Math.cos(branchAngle + spinAngle) * radius;
+    positions[i3 + 1] = (Math.random() - 0.5) * 2;
+    positions[i3 + 2] = Math.sin(branchAngle + spinAngle) * radius;
+
+    colors[i3] = radius / 10;
+    colors[i3 + 1] = 0.1;
+    colors[i3 + 2] = 1.0;
   }
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
-  let stars = [];
-  const numStars = 150;
+  const material = new THREE.PointsMaterial({
+    size: 0.05,
+    sizeAttenuation: true,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending,
+    vertexColors: true
+  });
 
-  for (let i = 0; i < numStars; i++) {
-    stars.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      radius: Math.random() * 1.5,
-      speed: Math.random() * 0.5 + 0.2
-    });
-  }
-
-  function drawStars() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#ffffff";
-    for (let i = 0; i < stars.length; i++) {
-      let s = stars[i];
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    updateStars();
-  }
-
-  function updateStars() {
-    for (let i = 0; i < stars.length; i++) {
-      let s = stars[i];
-      s.y += s.speed;
-      if (s.y > canvas.height) {
-        s.y = 0;
-        s.x = Math.random() * canvas.width;
-      }
-    }
-  }
+  const galaxy = new THREE.Points(geometry, material);
+  scene.add(galaxy);
 
   function animate() {
-    drawStars();
     requestAnimationFrame(animate);
+    galaxy.rotation.y += 0.001;
+    renderer.render(scene, camera);
   }
 
   animate();
 
   window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
   });
 
-  console.log("✨ stars.js loaded successfully");
+  console.log("✨ Galaxy + Canvas loaded successfully");
 });
